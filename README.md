@@ -1,159 +1,199 @@
-# AI Recipe Generator 🍽️
+AI Recipe Generator 🍛
 
-An AI-powered web application that generates cooking recipes from food images using Deep Learning, Computer Vision, and Natural Language Processing.
+Transform food images into complete cooking recipes using Deep Learning, Computer Vision, and Natural Language Generation.
 
-Upload a food image and the system will automatically:
+Upload a food image and the model will generate:
 
-* identify likely ingredients
-* generate recipe titles
-* create cooking instructions
-* produce human-friendly recipe outputs
+* 🍽 Recipe Title
+* 🥕 Ingredient List
+* 👨‍🍳 Cooking Instructions
 
-The project is built using Flask, PyTorch, CNNs, and Transformer-based sequence generation models.
+The project is built using:
 
----
-
-## Features
-
-* 📸 Food Image Upload
-* 🤖 AI-Based Recipe Generation
-* 🧂 Ingredient Prediction
-* 👨‍🍳 Step-by-Step Cooking Instructions
-* 🌍 Natural Cooking Language Enhancement
-* 🎨 Modern Web Interface
-* 🧠 Deep Learning + Transformer Architecture
-
----
-
-## Tech Stack
-
-### Backend
-
-* Python
 * Flask
 * PyTorch
-* TensorFlow/Keras
+* Torchvision
+* HTML/CSS/Bootstrap
 
-### AI / Deep Learning
+⸻
 
-* CNN Image Encoder
-* Transformer Decoder
-* Attention Mechanism
-* NLP-based Recipe Generation
+Features
 
-### Frontend
+* Food image upload support
+* AI-based ingredient prediction
+* AI-generated recipe instructions
+* Multiple recipe outputs
+* Indian-friendly recipe wording customization
+* Docker support for cross-platform setup
+* Responsive UI
 
-* HTML
-* CSS
-* JavaScript
-* Bootstrap
+⸻
 
----
+Project Structure
 
-## Project Structure
-
-```bash
-Foodimg2Ing/
+AI-Recipe-Generator/
 │
-├── model.py                # Main AI model pipeline
-├── routes.py               # Flask routes
-├── output.py               # Recipe generation and formatting
-├── modules/                # Transformer & encoder modules
-├── Templates/              # HTML templates
-├── static/                 # CSS, JS, images
-└── data/                   # Trained model + vocab files
-```
+├── Foodimg2Ing/
+│   ├── data/
+│   │   ├── modelbest.ckpt
+│   │   ├── ingr_vocab.pkl
+│   │   └── instr_vocab.pkl
+│   ├── Templates/
+│   ├── static/
+│   ├── model.py
+│   ├── output.py
+│   └── routes.py
+│
+├── Dockerfile
+├── docker-compose.yml
+├── requirements.txt
+├── run.py
+└── README.md
 
----
+⸻
 
-## Model Files
+Requirements
 
-This project uses pretrained model weights and vocabulary files stored inside:
+* Docker
+* Docker Compose
 
-```bash
-Foodimg2Ing/data/
-```
-
-Required files:
-
-* `modelbest.ckpt`
-* `ingr_vocab.pkl`
-* `instr_vocab.pkl`
-
----
-
-## Requirements
+OR
 
 * Python 3.8.18
-* Git LFS (required for large model files)
+* pip
 
----
+⸻
 
-## Setup Instructions
+Run Using Docker (Recommended) 🐳
 
-### 1. Install Git LFS
+This is the easiest and most reliable setup.
 
-```bash
-git lfs install
-```
+1. Clone Repository
 
-### 2. Clone Repository
+git clone https://github.com/GarryGs/AI-Recipe-Generator.git
+cd AI-Recipe-Generator
 
-```bash
-git clone https://github.com/GarryGs/AI-Recipe-Generator.git"
-cd "AI-Recipe-Generator"
-```
+⸻
 
-### 3. Install Python 3.8
+2. Start Application
 
-Using pyenv:
+docker compose up --build
 
-```bash
+⸻
+
+3. Open in Browser
+
+http://localhost:5000
+
+⸻
+
+Run Without Docker
+
+1. Install Python 3.8.18
+
+Recommended using pyenv:
+
 pyenv install 3.8.18
 pyenv local 3.8.18
-```
 
-### 4. Create Virtual Environment
+⸻
 
-```bash
+2. Create Virtual Environment
+
+Linux / macOS
+
 python -m venv venv
 source venv/bin/activate
-```
 
-### 5. Install Dependencies
+Windows
 
-```bash
+python -m venv venv
+venv\Scripts\activate
+
+⸻
+
+3. Install Dependencies
+
 pip install -r requirements.txt
-```
 
-### 6. Run Application
+⸻
 
-```bash
+4. Run Application
+
 python run.py
-```
 
-Open the localhost URL shown in the terminal inside your browser.
+⸻
 
----
+5. Open in Browser
 
-## Future Improvements
+http://localhost:5000
 
-* Better cuisine detection
-* Recipe regeneration modes
-* Nutrition estimation
-* Save recipe history
-* Mobile responsiveness
-* Improved recipe formatting
-* Enhanced Indian and global cuisine support
+⸻
 
----
+Model Files
 
-## Disclaimer
+The pretrained model and vocabulary files are already included inside:
 
-The generated recipes are AI-generated predictions and may not always perfectly match the uploaded food image.
+Foodimg2Ing/data/
 
----
+Files:
 
-## License
+* modelbest.ckpt
+* ingr_vocab.pkl
+* instr_vocab.pkl
 
-This project is intended for educational and learning purposes.
+⸻
+
+Sample Predictions
+
+Input:
+
+Food image uploaded by user
+
+Output:
+
+* Recipe title
+* Ingredients
+* Cooking steps
+
+⸻
+
+Tech Stack
+
+Component	Technology
+Backend	Flask
+ML Framework	PyTorch
+Frontend	HTML/CSS/Bootstrap
+Image Processing	Pillow
+Deployment	Docker
+
+⸻
+
+Notes
+
+* First startup may take some time because the AI model loads into memory.
+* Docker setup is recommended for best compatibility across Linux, macOS, and Windows.
+* The project uses CPU inference by default.
+
+⸻
+
+Future Improvements
+
+* Faster inference
+* Better Indian cuisine support
+* Modern frontend redesign
+* API support
+* Mobile responsive UI improvements
+* Cloud deployment
+
+⸻
+
+License
+
+This project is intended for educational and research purposes.
+
+⸻
+
+Author
+
+Developed and customized by GarryGs.
