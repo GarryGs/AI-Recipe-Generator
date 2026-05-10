@@ -8,7 +8,9 @@
     <!-- CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
-    
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 
     
@@ -22,10 +24,10 @@
     <!-- Navigation Bar -->
     <div id="Section-1">
         <nav class="navbar navbar-expand-lg navbar-light bg-grey">
-            <a class="navbar-brand mr-auto" href="{{url_for('home')}}" style="font-family: 'Times New Roman', Times, serif;">
-                <!-- <img src="{{ url_for('static',filename='images/favicon.ico') }}" width="30" height="30" class="d-inline-block align-top" alt="" style="margin-top: -5.5px;"> -->
+            <a class="navbar-brand mr-auto" href="{{url_for('home')}}">
+                <img src="{{ url_for('static', filename='images/favicon.ico') }}" class="nav-logo">
                 RecipeGPT</a>
-            <a href="{{url_for('home')}}" class="w-100 text-center text-dark">RECIPE GENERATION FROM FOOD IMAGE</a>
+            <!-- <a href="{{url_for('home')}}" class="w-100 text-center text-dark">Recipe Generation from Food Image</a> -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
