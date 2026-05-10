@@ -1,36 +1,37 @@
-AI Recipe Generator 🍛
+# AI Recipe Generator 🍛
 
 Transform food images into complete cooking recipes using Deep Learning, Computer Vision, and Natural Language Generation.
 
 Upload a food image and the model will generate:
 
-* 🍽 Recipe Title
-* 🥕 Ingredient List
-* 👨‍🍳 Cooking Instructions
+- 🍽 Recipe Title
+- 🥕 Ingredient List
+- 👨‍🍳 Cooking Instructions
 
 The project is built using:
 
-* Flask
-* PyTorch
-* Torchvision
-* HTML/CSS/Bootstrap
+- Flask
+- PyTorch
+- Torchvision
+- HTML/CSS/Bootstrap
 
-⸻
+---
 
-Features
+# ✨ Features
 
-* Food image upload support
-* AI-based ingredient prediction
-* AI-generated recipe instructions
-* Multiple recipe outputs
-* Indian-friendly recipe wording customization
-* Docker support for cross-platform setup
-* Responsive UI
+- Food image upload support
+- AI-based ingredient prediction
+- AI-generated recipe instructions
+- Multiple recipe outputs
+- Indian-friendly recipe wording customization
+- Docker support for cross-platform setup
+- Responsive UI
 
-⸻
+---
 
-Project Structure
+# 📁 Project Structure
 
+```bash
 AI-Recipe-Generator/
 │
 ├── Foodimg2Ing/
@@ -49,151 +50,179 @@ AI-Recipe-Generator/
 ├── requirements.txt
 ├── run.py
 └── README.md
+```
 
-⸻
+---
 
-Requirements
+# ⚙️ Requirements
 
-* Docker
-* Docker Compose
+You can run the project using either:
+
+## Option 1 — Docker (Recommended)
+
+- Docker
+- Docker Compose
 
 OR
 
-* Python 3.8.18
-* pip
+## Option 2 — Local Python Setup
 
-⸻
+- Python 3.8.18
+- pip
 
-Run Using Docker (Recommended) 🐳
+---
+
+# 🐳 Run Using Docker (Recommended)
 
 This is the easiest and most reliable setup.
 
-1. Clone Repository
+## 1. Clone Repository
 
+```bash
 git clone https://github.com/GarryGs/AI-Recipe-Generator.git
 cd AI-Recipe-Generator
+```
 
-⸻
+---
 
-2. Start Application
+## 2. Start Application
 
+```bash
 docker compose up --build
+```
 
-⸻
+---
 
-3. Open in Browser
+## 3. Open in Browser
 
+```text
 http://localhost:5000
+```
 
-⸻
+---
 
-Run Without Docker
+# 💻 Run Without Docker
 
-1. Install Python 3.8.18
+## 1. Install Python 3.8.18
 
 Recommended using pyenv:
 
+```bash
 pyenv install 3.8.18
 pyenv local 3.8.18
+```
 
-⸻
+---
 
-2. Create Virtual Environment
+## 2. Create Virtual Environment
 
-Linux / macOS
+### Linux / macOS
 
+```bash
 python -m venv venv
 source venv/bin/activate
+```
 
-Windows
+### Windows
 
+```bash
 python -m venv venv
 venv\Scripts\activate
+```
 
-⸻
+---
 
-3. Install Dependencies
+## 3. Install Dependencies
 
+```bash
 pip install -r requirements.txt
+```
 
-⸻
+---
 
-4. Run Application
+## 4. Run Application
 
+```bash
 python run.py
+```
 
-⸻
+---
 
-5. Open in Browser
+## 5. Open in Browser
 
+```text
 http://localhost:5000
+```
 
-⸻
+---
 
-Model Files
+# 🧠 Model Files
 
 The pretrained model and vocabulary files are already included inside:
 
+```bash
 Foodimg2Ing/data/
+```
 
-Files:
+Files included:
 
-* modelbest.ckpt
-* ingr_vocab.pkl
-* instr_vocab.pkl
+- `modelbest.ckpt`
+- `ingr_vocab.pkl`
+- `instr_vocab.pkl`
 
-⸻
+---
 
-Sample Predictions
+# 📸 Sample Output
 
-Input:
+### Input
 
 Food image uploaded by user
 
-Output:
+### Output
 
-* Recipe title
-* Ingredients
-* Cooking steps
+- Recipe title
+- Ingredients list
+- Cooking instructions
 
-⸻
+---
 
-Tech Stack
+# 🛠 Tech Stack
 
-Component	Technology
-Backend	Flask
-ML Framework	PyTorch
-Frontend	HTML/CSS/Bootstrap
-Image Processing	Pillow
-Deployment	Docker
+| Component | Technology |
+|---|---|
+| Backend | Flask |
+| ML Framework | PyTorch |
+| Frontend | HTML/CSS/Bootstrap |
+| Image Processing | Pillow |
+| Deployment | Docker |
 
-⸻
+---
 
-Notes
+# 📝 Notes
 
-* First startup may take some time because the AI model loads into memory.
-* Docker setup is recommended for best compatibility across Linux, macOS, and Windows.
-* The project uses CPU inference by default.
+- First startup may take some time because the AI model loads into memory.
+- Docker setup is recommended for best compatibility across Linux, macOS, and Windows.
+- The project uses CPU inference by default.
 
-⸻
+---
 
-Future Improvements
+# 🚀 Future Improvements
 
-* Faster inference
-* Better Indian cuisine support
-* Modern frontend redesign
-* API support
-* Mobile responsive UI improvements
-* Cloud deployment
+- Faster inference
+- Better Indian cuisine support
+- Modern frontend redesign
+- API support
+- Mobile responsive UI improvements
+- Cloud deployment
 
-⸻
+---
 
-License
+# 📄 License
 
 This project is intended for educational and research purposes.
 
-⸻
+---
 
-Author
+# 👨‍💻 Author
 
-Developed and customized by GarryGs.
+Developed and customized by **GarryGs**
