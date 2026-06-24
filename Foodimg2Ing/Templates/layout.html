@@ -31,10 +31,23 @@
                   File name here
               </div>
               </div>
-              <button onclick="defaultBtnActive()" id="custom-btn">Upload a Food Image</button>
-              <form id='foodimgform'action="/" method="POST" enctype="multipart/form-data">
-                <input id="default-btn" type="file" hidden name="imagefile">
-              </form>
+              <!-- The visual button the user clicks -->
+<button onclick="defaultBtnActive()" id="custom-btn">Upload a Food Image</button>
+
+<!-- Updated form pointing to the /predict route -->
+<form id="foodimgform" action="/predict" method="POST" enctype="multipart/form-data">
+  <!-- Added onchange="this.form.submit()" to auto-send the image -->
+  <input id="default-btn" type="file" hidden name="imagefile" onchange="this.form.submit()">
+</form> 
+<p class="center-text">or</p>
+<!-- Updated form pointing to the /predict route -->
+<form id="foodimgform" action="/predict" method="POST" enctype="multipart/form-data">
+  <!-- Added onchange="this.form.submit()" to auto-send the image -->
+       <!-- <label for="serial_no"><b>Enter serial no :</b></label> -->
+    <input type="text" id="food_name" name="food_name" placeholder="eg:- white sauce pasta" required>
+    <input type="submit" id="custom-btn" class="button" value="Generate Recipe">
+</form> 
+<p class="center-text">or</p>
               <button id="buttonsample" data-toggle="modal" data-target="#myModal">Choose from Sample Image</button>
               <div class="modal" id="myModal" tabindex="-1">
                 <div class="modal-dialog">
