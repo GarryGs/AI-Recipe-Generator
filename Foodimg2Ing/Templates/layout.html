@@ -5,14 +5,32 @@
   <div class="container pt-5">
       <div class="row">
           <div class="col-md-4">
+              <hr>
+
+              <h5 class="text-center text-white">Search Recipe</h5>
+
+              <form action="/search" method="POST">
+
+                  <input
+                      type="text"
+                      name="dish"
+                      class="form-control"
+                      placeholder="e.g. Chicken Biryani"
+                      required>
+
+                  <button
+                      class="btn btn-success btn-block mt-2">
+                      🔍 Search
+                  </button>
+
+              </form>
+              
               <div class="wrapper">
               <div class="image">
-                  {% if img %}
                   <img id="foodimage"
                       onload="$(this).data('loaded', 'loaded');"
                       src="{{ url_for('static',filename=img)}}"
                       alt="">
-                  {% endif %}
                   
 
               </div>
@@ -53,7 +71,7 @@
                                     <img src="{{ url_for('static',filename='images/sandwich.jpg') }}" class="card-img-top sample-img" alt="...">
                                     <div class="card-body">
                                       <h5 class="card-title">Sandwich</h5>
-                                      <a href="sandwich" class="btn btn-primary" onclick="select('sandwich.jpg')">Select</a>
+                                      <a href="/sample/sandwich" class="btn btn-primary" onclick="select('sandwich.jpg')">Select</a>
                                     </div>
                                 </div>
                               </div>
@@ -62,7 +80,7 @@
                                     <img src="{{ url_for('static',filename='images/pasta.jpg') }}" class="card-img-top sample-img" alt="..." >
                                     <div class="card-body">
                                       <h5 class="card-title">Pasta</h5>
-                                      <a href="pasta" class="btn btn-primary" onclick="select('pasta.jpg')" >Select</a>
+                                      <a href="/sample/pasta" class="btn btn-primary" onclick="select('pasta.jpg')" >Select</a>
                                     </div>
                                 </div>
                               </div>
@@ -71,7 +89,7 @@
                                     <img src="{{ url_for('static',filename='images/biryani.jpg') }}" class="card-img-top sample-img" alt="...">
                                     <div class="card-body">
                                       <h5 class="card-title">Biryani</h5>
-                                      <a href="biryani" class="btn btn-primary" onclick="select('biryani.jpg')">Select</a>
+                                      <a href="/sample/biryani" class="btn btn-primary" onclick="select('biryani.jpg')">Select</a>
                                     </div>
                                 </div>
                               </div>

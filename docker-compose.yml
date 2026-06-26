@@ -2,4 +2,6 @@ services:
   recipe-app:
     build: .
     ports:
-      - "5000:5000"
+      - "5050:5000"
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
